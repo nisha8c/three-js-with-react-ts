@@ -1,6 +1,6 @@
 function Header() {
     return(
-        <div>Header</div>
+        <div className={"white-font-color"}>Header</div>
     );
 }
 export default Header;
