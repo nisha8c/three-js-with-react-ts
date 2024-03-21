@@ -1,6 +1,7 @@
-import {Container, Stack} from "react-bootstrap";
+import {Button, Container, Stack} from "react-bootstrap";
 import './Welcome.scss';
 import {Footer, Header} from "../../components";
+import {Link} from "react-router-dom";
 
 function Welcome() {
     console.log('Welcome component is being rendered');
@@ -9,6 +10,7 @@ function Welcome() {
             <Header />
             <Container className={"my-4"}>
                 <h1>Welcome</h1>
+                <Link to={'/menu'}><Button>Explore Menu</Button></Link>
             </Container>
             <Footer />
         </Stack>
