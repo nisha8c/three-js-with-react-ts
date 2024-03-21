@@ -1,33 +1,22 @@
 import React from 'react';
 import './App.css';
-import {Container} from "react-bootstrap";
 import {Navigate, Route, Routes, useNavigate} from "react-router-dom";
 import {Welcome, MenuPage} from "./containers";
 import {ClerkProvider, SignIn, SignUp} from "@clerk/clerk-react";
 import WithSignInProtectionHOC from "./HOC/WithSignInProtectionHOC";
 
-if (!process.env.REACT_CLERK_PUBLISHABLE_KEY) {
+if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
     throw new Error("Missing Publishable Key")
 }
-const clerkPubKey = process.env.REACT_CLERK_PUBLISHABLE_KEY;
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 function App() {
   return (
-    <div className="App">
-        <header className="App-header">
-
-        </header>
-        <Container className={"my-4"}>
-            <ClerkProviderWithRoutes />
-        </Container>
-        <footer className={"App-footer"}>
-
-        </footer>
-    </div>
+      <ClerkProviderWithRoutes />
   );
 }
 
-const ClerkProviderWithRoutes = () => {
+function ClerkProviderWithRoutes() {
     const navigate = useNavigate();
     return(
         <ClerkProvider
