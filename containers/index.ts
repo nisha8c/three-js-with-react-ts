@@ -1,6 +1,10 @@
 import Welcome from "./Welcome/Welcome";
-import MenuPage from "./MenuPage/MenuPage";
+import WeeklyMenu from "./MenuPage/WeeklyMenu";
+import Services from "./Services/Services";
+import Testimonials from "./Testimonials/Testimonials";
 export {
     Welcome,
-    MenuPage
+    WeeklyMenu,
+    Services,
+    Testimonials
 }

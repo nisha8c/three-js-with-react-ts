@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Navigate, Route, Routes, useNavigate} from "react-router-dom";
-import {Welcome, MenuPage} from "./containers";
+import {Welcome, WeeklyMenu} from "./containers";
 import {ClerkProvider, SignIn, SignUp} from "@clerk/clerk-react";
 import WithSignInProtectionHOC from "./HOC/WithSignInProtectionHOC";
 
@@ -33,7 +33,7 @@ function ClerkProviderWithRoutes() {
                     path="/sign-up/*"
                     element={<SignUp routing="path" path="/sign-up" />}
                 />
-                <Route path="/menu" element={WithSignInProtectionHOC(MenuPage)} />
+                <Route path="/weekly-menu" element={WithSignInProtectionHOC(WeeklyMenu)} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </ClerkProvider>
