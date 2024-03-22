@@ -1,6 +1,7 @@
+import './Header.scss'
 function Header() {
     return(
-        <header className={"white-font-color"}>Header</header>
+        <header className={"header"}>Header</header>
     );
 }
 export default Header;

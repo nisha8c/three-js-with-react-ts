@@ -30,4 +30,13 @@
     width: 26px;
     height: 80px;
   }
+  @media screen and (max-width: 500px) {
+    height: 6vh;
+    svg {
+      width: 15px;
+      height: 40px;
+    }
+
+  }
 }
+
