@@ -4,6 +4,20 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
-  /* background-attachment: fixed; */
-  /* filter: blur(2px); */
+
+  h1 {
+    font-family: "Apple Chancery", sans-serif;
+    line-height: 1;
+  }
+  h6 {
+    font-family: "Comic Sans MS", serif;
+  }
+  .image-column {
+    background-size: cover;
+    background-position: center;
+     img {
+       width: 200px;
+       height: 200px;
+     }
+  }
 }
