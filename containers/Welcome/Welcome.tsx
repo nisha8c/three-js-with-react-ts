@@ -10,7 +10,7 @@ function Welcome() {
             <Header />
             <Container className={"my-4"}>
                 <h1 className={"white-font-color"}>Welcome</h1>
-                <Link to={'/menu'}><Button>Explore Menu</Button></Link>
+                <Link to={'/weekly-menu'}><Button>Explore Menu</Button></Link>
             </Container>
             <Footer />
         </Stack>

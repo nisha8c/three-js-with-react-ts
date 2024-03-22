@@ -3,14 +3,17 @@ import {
     SignedOut,
     RedirectToSignIn,
 } from "@clerk/clerk-react";
+import React, {ReactElement} from "react";
 
-import {ReactElement, ReactNode} from "react";
-function WithSignInProtectionHOC (WrappedComponent: () => ReactElement): ReactNode {
+interface WithSignInProtectionProps {
+    children: ReactElement;
+}
 
+function WithSignInProtectionHOC({ children }: WithSignInProtectionProps): React.ReactElement {
     return (
         <>
             <SignedIn>
-                <WrappedComponent />
+                {children}
             </SignedIn>
             <SignedOut>
                 <RedirectToSignIn />

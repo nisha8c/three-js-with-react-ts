@@ -33,7 +33,13 @@ function ClerkProviderWithRoutes() {
                     path="/sign-up/*"
                     element={<SignUp routing="path" path="/sign-up" />}
                 />
-                <Route path="/weekly-menu" element={WithSignInProtectionHOC(WeeklyMenu)} />
+                <Route
+                    path="/weekly-menu"
+                    element={
+                    <WithSignInProtectionHOC>
+                        <WeeklyMenu title={"Weekly Menu"} items={[]}/>
+                    </WithSignInProtectionHOC>}
+                />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </ClerkProvider>
