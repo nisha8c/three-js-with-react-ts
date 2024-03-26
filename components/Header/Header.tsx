@@ -13,18 +13,18 @@ const Header: React.FC = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#features">Link 1</Nav.Link>
-                    <Nav.Link href="#pricing">Link 2</Nav.Link>
-                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/weekly-menu">Our Menu</Nav.Link>
+                    <NavDropdown title="About Us" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Our Branches</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Our Customers</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Book Online Meet</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Contact</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#deets">User Link 1</Nav.Link>
+                    <Nav.Link>User Link 1</Nav.Link>
                     <Nav.Link eventKey={2} href="#memes">
                         User Link 2
                     </Nav.Link>
