@@ -8,7 +8,7 @@ function Welcome() {
     return (
         <Stack className={"welcome-main"}>
             <Container className={"white-font-color"}>
-                <Row className={""}>
+                <Row className={"row1"}>
                     <Col xs={12} md={8}>
                         <h1 className={"white-font-color"}>
                             Delicious Catering & Food Distribution Services
@@ -16,7 +16,7 @@ function Welcome() {
                         <h6 className={"white-font-color"}>
                             Explore our wide range of food options for any event or occasion!
                         </h6>
-                        <Link to={'/weekly-menu'}><Button>Explore Menu</Button></Link>
+                        <Link to={'/weekly-menu'}><Button className={"explore-menu-link"}>Explore Menu</Button></Link>
                     </Col>
                     <Col xs={6} md={4} className={"image-column"}>
                         <img

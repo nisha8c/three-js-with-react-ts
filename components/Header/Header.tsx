@@ -1,9 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './Header.scss';
+import {UserButton, useUser} from "@clerk/clerk-react";
 // import logo from '../../constants/White on Transparent.png'
 
 const Header: React.FC = () => {
+    const { user } = useUser();
     return (
         <Navbar collapseOnSelect expand="lg" bg={"black"} variant="dark">
             <Navbar.Brand href="/">
@@ -23,11 +25,8 @@ const Header: React.FC = () => {
                         <NavDropdown.Item href="#action/3.4">Contact</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                <Nav>
-                    <Nav.Link>User Link 1</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
-                        User Link 2
-                    </Nav.Link>
+                <Nav className={"p-2"}>
+                    <UserButton></UserButton>{user && <span className="white-font-color p-1"> Welcome, {user.firstName} !</span>}
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

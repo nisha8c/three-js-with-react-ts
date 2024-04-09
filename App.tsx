@@ -14,7 +14,6 @@ const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 function App() {
   return (
       <>
-          <Header />
           <ClerkProviderWithRoutes />
           <Footer />
       </>
@@ -28,6 +27,7 @@ function ClerkProviderWithRoutes() {
             publishableKey={clerkPubKey}
             navigate={to => navigate(to)}
         >
+            <Header />
             <Routes>
                 <Route path={"/"} element={<Welcome />} />
                 <Route
